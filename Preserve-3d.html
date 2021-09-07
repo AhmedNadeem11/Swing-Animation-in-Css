@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">                     
+  
+    <title></title>
+    <style type="text/css" media="all">
+      body{
+        position:absolute;
+        top: 30%;
+        left:5%;
+        right: 0%;
+      }
+      .container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 250px;
+        width: 300px;
+        background: rgba(0,0,0,0.3);
+        transform:perspective(500px) rotateY(0deg);
+        transform-style: preserve-3d;
+      }
+      .img-container{
+        height: 250px;
+        width: 300px;
+        
+      }
+      .img-container img{
+        height: 250px;
+        width: 300px;
+        transform:  rotateX(0deg);
+        transform-origin:top ;
+        animation: animate 5s ease-in-out infinite;
+        transition: animate 1s ease-in-out;
+      }
+      @keyframes animate{
+        0%{transform:rotateX(50deg)}
+        50%{transform:rotateX(-50deg)}
+        100%{transform:rotateX(50deg)}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="img-container">
+          <img src="img.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
